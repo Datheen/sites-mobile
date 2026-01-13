@@ -1,16 +1,24 @@
+import ResponsiveAppBar from "../components/ResponsiveAppBar";
+
+
+
 function Hero() {
   return (
+    
+    
     <div
       id="hero-content"
       className="overflow-x-hidden h-230 w-full bg-hero bg-cover bg-center flex flex-col
 "
-    >
+    > <div className="z-100"><ResponsiveAppBar/></div>
+      
       <div
         id="overlay"
-        className="absolute inset-0 h-230 bg-black/80 overflow-x-clip"
+        className="absolute inset-0 h-230 bg-blue-950/55 overflow-x-clip"
       >
-        <img className=" h-20 mt-15 ml-20" src="/img/logo.webp" />
-        <h1 className="relative  ml-3 mt-10 text-3xl font-cormorant w-100 text-center text-white/90 font-bold">
+        
+       
+        <h1 className="relative  ml-3 mt-30 text-4xl font-cormorant w-100 text-center text-white/90 font-bold">
           Onde a lei encontra <span className="text-gold">posicionamento</span>{" "}
           e decisão. Advocacia <span className="text-gold">estratégica</span>{" "}
           para quem precisa de resposta.
@@ -23,13 +31,12 @@ function Hero() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#d0af6c"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#d0af6c"
             >
-              <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+              <path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z" />
             </svg>
             <p className="text-white">Contato</p>
           </div>
