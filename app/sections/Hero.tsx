@@ -7,7 +7,7 @@ function Hero() {
     >
       <div
         id="overlay"
-        className="absolute inset-0 h-230 bg-blue-950/60 overflow-x-clip"
+        className="absolute inset-0 h-230 bg-black/80 overflow-x-clip"
       >
         <img className=" h-20 mt-15 ml-20" src="/img/logo.webp" />
         <h1 className="relative  ml-3 mt-10 text-3xl font-cormorant w-100 text-center text-white/90 font-bold">
