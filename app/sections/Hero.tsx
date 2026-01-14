@@ -18,10 +18,9 @@ function Hero() {
       >
         
        
-        <h1 className="relative  ml-3 mt-30 text-4xl font-cormorant w-100 text-center text-white/90 font-bold">
-          Onde a lei encontra <span className="text-gold">posicionamento</span>{" "}
-          e decisão. Advocacia <span className="text-gold">estratégica</span>{" "}
-          para quem precisa de resposta.
+        <h1 className="relative  ml-3 mt-30 text-4xl font-cormorant w-100 text-center uppercase text-white/90 font-black">
+          Advocacia <span className="text-gold">estratégica</span>{" "}
+          para quem precisa de resposta
         </h1>
         <img className="relative ml-2" src="/img/home/hero-statue.webp" />
         <div id="actions" className="flex items-center justify-center gap-7">
