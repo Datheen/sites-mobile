@@ -23,7 +23,7 @@ function Hero() {
           para quem precisa de resposta
         </h1>
         <img className="relative ml-2" src="/img/home/hero-statue.webp" />
-        <div id="actions" className="flex items-center justify-center gap-7">
+        <div id="actions" className="flex opacity-80 items-center justify-center gap-7">
           <div
             id="btn"
             className=" flex items-center justify-center active:invert-10 gap-10 w-42 h-12.5 bg-gold rounded-br-2xl rounded-tl-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)]"
