@@ -51,9 +51,12 @@ function ResponsiveAppBar() {
         WebkitBackdropFilter: "blur(12px)",
       }}
     >
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+      <Container maxWidth="xl" sx={{ px: 0 }}>
+        <Toolbar disableGutters sx={{ justifyContent: "space-between", px: 0, minHeight: "72px" }}>
+          <Box sx={{ display: { xs: "flex", md: "none" }, pl: "20px" }}>
+            <Image className="w-30" src={logoImg} alt="Logo" />
+          </Box>
+          <Box sx={{ display: { xs: "flex", md: "none" }, pr: "20px" }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -61,9 +64,12 @@ function ResponsiveAppBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
+              sx={{ m: 0, p: 0 }}
             >
               <MenuIcon />
             </IconButton>
+          </Box>
+          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -87,25 +93,6 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <Image className="w-30 mr-7" src={logoImg} alt="Logo" />
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          ></Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Button

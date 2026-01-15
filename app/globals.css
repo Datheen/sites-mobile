@@ -13,6 +13,6 @@
   font-family: var(--font-cormorant);
 }
 
-.bg-hero {
-  background-image: url('/img/home/hero.webp');
+.font-inter {
+  font-family: var(--font-inter);
 }
