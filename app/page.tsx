@@ -7,9 +7,9 @@ import Sobre from "./sections/Sobre";
 export default function Home() {
   return (
     <>
-    <Header/>
-<Hero/>
-<Sobre/>
+      <Header />
+      <Hero />
+      <Sobre />
     </>
   );
 }

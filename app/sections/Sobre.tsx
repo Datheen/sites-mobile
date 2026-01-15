@@ -1,3 +1,8 @@
+
+"use client";
+
+import CountUp from "react-countup";
+
 function Sobre() {
   return (
     <div id="sobre-section" className="bg-[#1E2833] h-[2500px]">
@@ -75,7 +80,9 @@ function Sobre() {
             </svg>
 
             <div className="flex flex-col -mr-7 mt-2">
-              <span className="text-[48px] font-bold text-white/90">95%</span>
+              <span id="countup" className="text-[48px] font-bold text-white/90">
+                <CountUp end={95} duration={2.5} suffix="%" enableScrollSpy scrollSpyOnce />
+              </span>
               <p className="font-inter text-[10px] w-[180px] -mt-2 text-white/90">
                 Sucesso de casos em <br /> tribunais da capital e interior
               </p>
@@ -85,8 +92,8 @@ function Sobre() {
           {/*Contagem anos de experiência*/}
 
           <div className="w-[292px] h-[126px] bg-gold rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center gap-3">
-            <span className="text-[64px] font-inter font-bold text-[#1E2833]">
-              +20
+            <span id="countup" className="text-[64px] font-inter font-bold text-[#1E2833]">
+              <CountUp end={20} duration={2.5} prefix="+" enableScrollSpy scrollSpyOnce />
             </span>
             <p className="text-[#1E2833] font-inter font-bold text-[20px]">
               Anos de <br /> experiência
@@ -94,28 +101,46 @@ function Sobre() {
           </div>
         </div>
 
-{/*Segunda Parte de Sobre*/}
+        {/*Segunda Parte de Sobre*/}
 
-<div id="divisao" className="w-full bg-gold h-[10px] mt-20"></div>
+        <div id="divisao" className="w-full bg-gold h-[10px] mt-20"></div>
 
+        {/*Texto e parte final do sobre*/}
 
+        <div className="flex flex-col items-center justify-center mt-15">
+          <h1 className="font-cormorant font-bold text-gold text-[24px] font-semibold w-[384px]">
+            Nós somo os melhores em fidelidade e satisfação do cliente
+          </h1>
+          <p className="text-white/90 font-inter text-[16px] w-[384px] mt-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            consequatur cumque in itaque, ab assumenda fuga dolorem non
+            laboriosam possimus sequi facere vero et soluta doloremque ullam
+            unde exercitationem expedita. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Illum aspernatur aliquid quidem excepturi minima
+            omnis libero consectetur, ipsum voluptatibus. Doloribus labore et
+            cumque. Illum praesentium ducimus est expedita nihil explicabo?
+          </p>
 
-{/*Texto e parte final do sobre*/}
+          <span className="font-cormorant text-[36px] font-semibold text-gold w-[384px]">
+            1995
+          </span>
 
-<div className="flex flex-col items-center justify-center mt-15">
-<h1 className="font-cormorant font-bold text-gold text-[24px] font-semibold w-[384px]">Nós somo os melhores em fidelidade e satisfação do cliente</h1>
-<p className="text-white/90 font-inter text-[16px] w-[384px] mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate consequatur cumque in itaque, ab assumenda fuga dolorem non laboriosam possimus sequi facere vero et soluta doloremque ullam unde exercitationem expedita. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aspernatur aliquid quidem excepturi minima omnis libero consectetur, ipsum voluptatibus. Doloribus labore et cumque. Illum praesentium ducimus est expedita nihil explicabo?</p>
+          <p className="font-inter text-white text-[16px] w-[384px] mt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+            facere, placeat voluptatibus modi ipsa sint, exercitationem,
+            doloremque repudiandae delectus facilis dolorum possimus nihil ipsam
+            repellendus cumque esse vel cupiditate perferendis!
+          </p>
+        </div>
 
-<span className="font-cormorant text-[36px] font-semibold text-gold w-[384px]">1995</span>
-
-<p className="font-inter text-white text-[16px] w-[384px] mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam facere, placeat voluptatibus modi ipsa sint, exercitationem, doloremque repudiandae delectus facilis dolorum possimus nihil ipsam repellendus cumque esse vel cupiditate perferendis!</p>
-
-</div>
-
-{/*Imagem da Advogada*/}
-<div className="flex justify-center items-center mt-8"><img className="w-[305px]" src="/img/sobre/mulher.webp" alt="Imagem Advogada" /></div>
-
-
+        {/*Imagem da Advogada*/}
+        <div className="flex justify-center items-center mt-8">
+          <img
+            className="w-[305px]"
+            src="/img/sobre/mulher.webp"
+            alt="Imagem Advogada"
+          />
+        </div>
       </div>
     </div>
   );
