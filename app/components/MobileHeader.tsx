@@ -9,35 +9,23 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import Image from "next/image";
 import logoImg from "@/public/img/logo.webp";
 
-const pages = ["Início", "Sobre", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const pages = ["Início", "Sobre", "Serviços", "Blog", "Atendimento"];
 
-function ResponsiveAppBar() {
+function MobileHeader() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -52,14 +40,17 @@ function ResponsiveAppBar() {
       }}
     >
       <Container maxWidth="xl" sx={{ px: 0 }}>
-        <Toolbar disableGutters sx={{ justifyContent: "space-between", px: 0, minHeight: "72px" }}>
-          <Box sx={{ display: { xs: "flex", md: "none" }, pl: "20px" }}>
+        <Toolbar
+          disableGutters
+          sx={{ justifyContent: "space-between", px: 0, minHeight: "72px" }}
+        >
+          <Box sx={{ pl: "20px" }}>
             <Image className="w-30" src={logoImg} alt="Logo" />
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" }, pr: "20px" }}>
+          <Box sx={{ pr: "20px" }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu de navegação"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -68,23 +59,20 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "left",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
                 vertical: "top",
-                horizontal: "left",
+                horizontal: "right",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -93,20 +81,9 @@ function ResponsiveAppBar() {
               ))}
             </Menu>
           </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default MobileHeader;

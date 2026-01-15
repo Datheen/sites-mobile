@@ -1,10 +1,10 @@
-import ResponsiveAppBar from "../components/ResponsiveAppBar";
+import ResponsiveAppBar from "../components/MobileHeader";
 
 function Hero() {
   return (
     <div
       id="hero-main"
-      className="h-[932px] flex flex-col"
+      className="h-[932px] flex flex-col md:h-[750px]"
       style={{
         backgroundImage: "url('img/home/hero.webp')",
         backgroundSize: "cover",
@@ -12,50 +12,71 @@ function Hero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div id="overlay" className="bg-[#141427] h-[955px] opacity-85 overflow-x-clip">
-        <ResponsiveAppBar />
+      <div
+        id="overlay"
+        className="bg-[#141427] h-[955px] opacity-85 overflow-x-clip"
+      >
         <div
-          id="hero-text"
-          className="flex flex-col text-center items-center justify-center pt-[81px] gap-3"
+          id="container"
+          className="mw-full max-w-[1440px] mx-auto md:px-8 md:flex md:mt-8"
         >
-          <h2 className="underline font-inter -mt-15 text-white/90">
-            INOVANDO IDEIAS
-          </h2>
-          <h1 className="w-[390px] text-center text-white/90 uppercase font-cormorant text-[30px] font-bold">
-            Advocacia <span className="text-gold">estratégica</span> <br />
-            para quem precisa de resposta.
-          </h1>
+          <div id="mobile-header" className="md:hidden">
+            <ResponsiveAppBar />
+          </div>
+
+          <div
+            id="hero-text"
+            className="flex flex-col text-center items-center justify-center pt-[81px] gap-3"
+          >
+            <h2 className="underline font-inter -mt-15 text-white/90 md:-mt-30">
+              INOVANDO IDEIAS
+            </h2>
+            <h1 className="w-[390px] text-center text-white/90 uppercase font-cormorant text-[30px]   font-bold md:text-[46px] md:text-start md:w-[560px] md:-mr-80 md:ml-20">
+              Advocacia <span className="text-gold">estratégica</span> 
+              <br className="md:hidden" />
+              <br className="hidden md:block" />
+              para quem precisa de resposta.
+            </h1>
+          </div>
+
+          <div className="md:flex md:flex-row-reverse md:items-end md:-ml-30">
+            <div
+              id="hero-statue"
+              className="h-[544px] w-[471px] md:ml-15 md:mt-25"
+            >
+              <img src="/img/home/hero-statue.webp" alt="Estátua Themis" />
+            </div>
+
+            <div id="hero-actions" className="flex md:-ml-32">
+              <div id="btn" className="-mt-2 ml-2.5 md:-mt-46">
+                <div className="w-[142px] hover:cursor-pointer flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
+                  <svg
+                    className="ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#d0af6c"
+                  >
+                    <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z" />
+                  </svg>
+
+                  <p className="ml-6 font-inter text-white text-[14px]">
+                    Ver mais
+                  </p>
+                </div>
+              </div>
+
+              <div className="md:-mt-68 md:ml-23">
+                <div className="h-[36px] w-1 bg-gold ml-6"></div>
+                <p className="text-white font-inter ml-10 text-[14px] -mt-10 w-[397px] h-[89px] ">
+                  Lei, estratégia e posicionamento. <br /> Atuamos onde decisões
+                  importam.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
-
-
-        <div id="hero-statue" className="h-[544px] w-[471px]">
-          <img src="/img/home/hero-statue.webp" alt="Estátua Themis" />
-        </div>
-        
-        
-        <div id="hero-actions" className="flex">
-
-<div id="btn" className="-mt-2 ml-2.5" >
-
-  <div className="w-[142px] flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
-
-<svg className="ml-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d0af6c"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/></svg>
-
-<p className="ml-6 font-inter text-white text-[14px]">Ver mais</p>
-
-</div>
-</div>
-
-<div>
-<div className="h-[36px] w-1 bg-gold ml-6"></div>
-<p className="text-white font-inter ml-10 text-[14px] -mt-10 w-[397px] h-[89px] ">Lei, estratégia e posicionamento. <br /> Atuamos onde decisões importam.</p>
-
-</div>
-        </div>
-
-
-
       </div>
     </div>
   );
