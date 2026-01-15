@@ -1,7 +1,7 @@
 function Header() {
   return (
     <div className="flex justify-center">
-      <header className="hidden backdrop-blur-md md:flex items-center fixed z-10 justify-center h-20 bg-blue-950/40 w-full 2xl:h-25">
+      <header className="hidden border-y-2 border-amber-400/30 backdrop-blur-md md:flex items-center fixed z-10 justify-center h-20 bg-blue-950/40 w-full 2xl:h-25">
         <div
           id="header-container"
           className="w-[1440px] flex justify-center items-center 2xl:w-[1920px]"

@@ -44,7 +44,11 @@ function Hero() {
               id="hero-statue"
               className="h-[544px] w-[471px] md:ml-15 md:mt-25  2xl:ml-5"
             >
-              <img className="2xl:scale-110" src="/img/home/hero-statue.webp" alt="Estátua Themis" />
+              <img
+                className="2xl:scale-110"
+                src="/img/home/hero-statue.webp"
+                alt="Estátua Themis"
+              />
             </div>
 
             <div id="hero-actions" className="flex md:-ml-32">

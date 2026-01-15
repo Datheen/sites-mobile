@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
-
 .bg-gold {
-  background-color: #D0AF6C;
+  background-color: #d0af6c;
 }
 
 .text-gold {
-  color: #D0AF6C;
+  color: #d0af6c;
 }
 
 .font-cormorant {
