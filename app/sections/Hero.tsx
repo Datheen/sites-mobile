@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div
       id="hero-main"
-      className="h-[955px] flex flex-col"
+      className="h-[932px] flex flex-col"
       style={{
         backgroundImage: "url('img/home/hero.webp')",
         backgroundSize: "cover",
@@ -18,7 +18,7 @@ function Hero() {
           id="hero-text"
           className="flex flex-col text-center items-center justify-center pt-[81px] gap-3"
         >
-          <h2 className="underline font-inter text-white/90">
+          <h2 className="underline font-inter -mt-15 text-white/90">
             INOVANDO IDEIAS
           </h2>
           <h1 className="w-[390px] text-center text-white/90 uppercase font-cormorant text-[30px] font-bold">
