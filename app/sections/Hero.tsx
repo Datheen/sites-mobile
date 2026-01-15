@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div
       id="hero-main"
-      className="h-[932px] flex flex-col"
+      className="h-[955px] flex flex-col"
       style={{
         backgroundImage: "url('img/home/hero.webp')",
         backgroundSize: "cover",
@@ -12,7 +12,7 @@ function Hero() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div id="overlay" className="bg-[#141427] h-[932px] opacity-85 overflow-x-clip">
+      <div id="overlay" className="bg-[#141427] h-[955px] opacity-85 overflow-x-clip">
         <ResponsiveAppBar />
         <div
           id="hero-text"
@@ -38,7 +38,7 @@ function Hero() {
 
 <div id="btn" className="-mt-2 ml-2.5" >
 
-  <div className="w-[142px] flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)]">
+  <div className="w-[142px] flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
 
 <svg className="ml-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#d0af6c"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/></svg>
 
@@ -49,7 +49,7 @@ function Hero() {
 
 <div>
 <div className="h-[36px] w-1 bg-gold ml-6"></div>
-<p className="text-white font-inter ml-10 text-[14px] absolute -bottom-6 w-[397px] h-[89px] ">Lei, estratégia e posicionamento. <br /> Atuamos onde decisões importam.</p>
+<p className="text-white font-inter ml-10 text-[14px] -mt-10 w-[397px] h-[89px] ">Lei, estratégia e posicionamento. <br /> Atuamos onde decisões importam.</p>
 
 </div>
         </div>
