@@ -1,16 +1,16 @@
 function Header() {
   return (
     <div className="flex justify-center">
-      <header className="hidden backdrop-blur-md md:flex items-center fixed z-10 justify-center h-20 bg-blue-950/40 w-full">
+      <header className="hidden backdrop-blur-md md:flex items-center fixed z-10 justify-center h-20 bg-blue-950/40 w-full 2xl:h-25">
         <div
           id="header-container"
-          className="w-[1440px] flex justify-center items-center"
+          className="w-[1440px] flex justify-center items-center 2xl:w-[1920px]"
         >
           {" "}
           <div>
             <img className="w-40" src="/img/logo.webp" alt="Civix Logo" />
           </div>
-          <nav className="text-white/90 flex gap-6 text-[14px] font-inter mx-55 z-10 uppercase">
+          <nav className="text-white/90 flex gap-6 text-[14px] font-inter mx-55 z-10 uppercase 2xl:mx-70 2xl:gap-15 2xl:text-[16px]">
             <a className="hover:cursor-pointer hover:text-[#D0AF6C] active:text">
               Início
             </a>
@@ -29,7 +29,7 @@ function Header() {
           </nav>
           <div>
             <div id="btn" className=" ml-2.5">
-              <div className="w-[142px] hover:cursor-pointer flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
+              <div className="w-[142px] opacity-90 hover:opacity-100 hover:cursor-pointer flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="24px"

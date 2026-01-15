@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div
       id="hero-main"
-      className="h-[932px] flex flex-col md:h-[750px]"
+      className="h-[932px] flex flex-col md:h-[750px] 2xl:h-[1024px]"
       style={{
         backgroundImage: "url('img/home/hero.webp')",
         backgroundSize: "cover",
@@ -14,11 +14,11 @@ function Hero() {
     >
       <div
         id="overlay"
-        className="bg-[#141427] h-[955px] opacity-85 overflow-x-clip"
+        className="bg-[#141427] h-[955px] opacity-85 overflow-x-clip 2xl:h-[1024px]"
       >
         <div
           id="container"
-          className="mw-full max-w-[1440px] mx-auto md:px-8 md:flex md:mt-8"
+          className="mw-full max-w-[1440px] mx-auto md:px-8 md:flex md:mt-8 2xl:scale-130 2xl:pl-20 2xl:pt-20"
         >
           <div id="mobile-header" className="md:hidden">
             <ResponsiveAppBar />
@@ -42,14 +42,14 @@ function Hero() {
           <div className="md:flex md:flex-row-reverse md:items-end md:-ml-30">
             <div
               id="hero-statue"
-              className="h-[544px] w-[471px] md:ml-15 md:mt-25"
+              className="h-[544px] w-[471px] md:ml-15 md:mt-25  2xl:ml-5"
             >
-              <img src="/img/home/hero-statue.webp" alt="Estátua Themis" />
+              <img className="2xl:scale-110" src="/img/home/hero-statue.webp" alt="Estátua Themis" />
             </div>
 
             <div id="hero-actions" className="flex md:-ml-32">
               <div id="btn" className="-mt-2 ml-2.5 md:-mt-46">
-                <div className="w-[142px] hover:cursor-pointer flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
+                <div className="w-[142px] opacity-90 hover:opacity-100 hover:cursor-pointer flex items-center justify-center text-center h-[49px] bg-gold rounded-tl-2xl rounded-br-2xl bg-[linear-gradient(to_right,#ffff_0%,#ffff_42%,#d0af6c_42%,#d0af6c_100%)] active:invert-15">
                   <svg
                     className="ml-2"
                     xmlns="http://www.w3.org/2000/svg"
