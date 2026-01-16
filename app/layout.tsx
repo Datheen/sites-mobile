@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${cormorant.variable} ${inter.variable}`}
+        className={`${cormorant.variable} ${inter.variable} overflow-x-hidden`}
         suppressHydrationWarning
       >
         {children}

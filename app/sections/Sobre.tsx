@@ -1,72 +1,81 @@
 "use client";
 
 import CountUp from "react-countup";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 function Sobre() {
+  useIntersectionObserver();
+
   return (
-    <div id="sobre-section" className="bg-[#1E2833] h-[2330px]">
-      <div id="sobre-container">
+    <div
+      id="sobre-section"
+      className="bg-[#1E2833] h-[2330px] flex justify-center md:h-[1349px] 2xl:scale-125 2xl:mt-42"
+    >
+      <div id="sobre-container" className="max-w-full">
         {/* Homem lendo livro sobre direitos */}
-        <div
-          id="card-image"
-          className="flex flex-col justify-center items-center pt-[37px] "
-        >
-          <img
-            className="w-[350px] h-[337px] rounded-tr-[70px] z-1 rounded-bl-[70px]"
-            src="/img/sobre/advogado.webp"
-            alt="Advogado Lendo Livro"
-          />
 
-          <p className="w-[300px] -mt-15 ml-5 z-10 font-inter font-medium text-white text-[12px]">
-            O conhecimento das leis é o primeiro passo para transfomar direitos
-            em justiça
-          </p>
-        </div>
-
-        {/* Texto com card e foto do acessor */}
-
-        <div className="flex flex-col justify-center items-center mt-15">
-          <h1 className="font-inter text-white text-[20px] w-[370px]">
-            Nós somos advogados pelo direito e justiça, com base nos mais altos
-            padrões de conhecimento
-          </h1>
-
+        <div id="md-mode" className="md:flex">
           <div
-            id="line-gradient"
-            className="h-2 w-[370px] mt-3 bg-gradient-to-r from-[#d0af6c] to-white/0"
+            id="card-image"
+            className="flex flex-col justify-center items-center pt-[37px] md:scale-140 md:mt-20 md:ml-40"
           >
-            {" "}
+            <img
+              className="w-[350px] h-[337px] rounded-tr-[70px] z-1 rounded-bl-[70px]"
+              src="/img/sobre/advogado.webp"
+              alt="Advogado Lendo Livro"
+            />
+
+            <p className="w-[300px] -mt-15 ml-5 z-10 font-inter font-medium text-white text-[12px]">
+              O conhecimento das leis é o primeiro passo para transfomar
+              direitos em justiça
+            </p>
           </div>
 
-          <p className="w-[370px] text-[16px] mt-4 text-white/90">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos unde
-            dolorem est! Iusto earum, minus odio ullam culpa optio est
-            explicabo! Harum autem eos suscipit voluptatum provident nihil
-            consequuntur dolor?
-          </p>
+          {/* Texto com card e foto do acessor */}
 
-          <div className="flex mt-8 -ml-10">
-            <img
-              className="rounded-full w-[58px]"
-              src="/img/sobre/profile.webp"
-              alt="Foto do Acessor"
-            />
-            <div className="ml-4">
-              <h1 className="font-inter text-[20px] font-semibold text-white/90">
-                Willian Felipe de Almeida
-              </h1>
-              <p className="text-white/80">Acessor executivo da Civix</p>
+          <div className="flex flex-col justify-center items-center mt-15 md:ml-86  md:scale-115">
+            <h1 className="font-inter text-white text-[20px] w-[370px]">
+              Nós somos advogados pelo direito e justiça, com base nos mais
+              altos padrões de conhecimento
+            </h1>
+
+            <div
+              id="line-gradient"
+              className="h-2 w-[370px] mt-3 bg-gradient-to-r from-[#d0af6c] to-white/0"
+            >
+              {" "}
+            </div>
+
+            <p className="w-[370px] text-[16px] mt-4 text-white/90">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos unde
+              dolorem est! Iusto earum, minus odio ullam culpa optio est
+              explicabo! Harum autem eos suscipit voluptatum provident nihil
+              consequuntur dolor?
+            </p>
+
+            <div className="flex mt-8 -ml-10">
+              <img
+                className="rounded-full w-[58px]"
+                src="/img/sobre/profile.webp"
+                alt="Foto do Acessor"
+              />
+              <div className="ml-4">
+                <h1 className="font-inter text-[20px] font-semibold text-white/90">
+                  Willian Felipe de Almeida
+                </h1>
+                <p className="text-white/80">Acessor executivo da Civix</p>
+              </div>
             </div>
           </div>
         </div>
 
         <div
           id="cards-counters"
-          className="flex flex-col items-center mt-15 gap-[30px]"
+          className="flex flex-col items-center mt-15 gap-[30px] md:flex-row md:ml-185 md:scale-70"
         >
           {/* Porcentagem de casos resolvidos */}
 
-          <div className="w-[292px] h-[126px] bg-[#0050C8] rounded-tl-[30px] rounded-br-[30px] gap-4  flex">
+          <div className="w-[292px] h-[126px] bg-[#0050C8]/70 rounded-tl-[30px] rounded-br-[30px] gap-4  flex">
             <svg
               className="ml-4 mt-4"
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +90,7 @@ function Sobre() {
             <div className="flex flex-col -mr-7 mt-2">
               <span
                 id="countup"
-                className="text-[48px] font-bold text-white/90"
+                className="text-[48px] mb-1 font-bold text-white/90"
               >
                 <CountUp
                   end={95}
@@ -91,8 +100,8 @@ function Sobre() {
                   scrollSpyOnce
                 />
               </span>
-              <p className="font-inter text-[10px] w-[180px] -mt-2 text-white/90">
-                Sucesso de casos em <br /> tribunais da capital e interior
+              <p className=" text-[14px] w-[180px] -mt-4 text-white/90">
+                Sucesso de casos em <br /> tribunais da capital
               </p>
             </div>
           </div>
@@ -120,43 +129,52 @@ function Sobre() {
 
         {/*Segunda Parte de Sobre*/}
 
-        <div id="divisao" className="w-full bg-gold h-[10px] mt-20"></div>
+        <div
+          id="divisao"
+          className="w-[430px] bg-gold h-[10px] mt-20 md:w-full"
+        ></div>
 
         {/*Texto e parte final do sobre*/}
 
-        <div className="flex flex-col items-center justify-center mt-15">
-          <h1 className="font-cormorant font-bold text-gold text-[24px] font-semibold w-[384px]">
-            Nós somo os melhores em fidelidade e satisfação do cliente
-          </h1>
-          <p className="text-white/90 font-inter text-[16px] w-[384px] mt-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            consequatur cumque in itaque, ab assumenda fuga dolorem non
-            laboriosam possimus sequi facere vero et soluta doloremque ullam
-            unde exercitationem expedita. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Illum aspernatur aliquid quidem excepturi minima
-            omnis libero consectetur, ipsum voluptatibus. Doloribus labore et
-            cumque. Illum praesentium ducimus est expedita nihil explicabo?
-          </p>
+        <div
+          id="md-mode"
+          className="md:flex md:justify-center md:gap-100 md:mt-15"
+        >
+          <div className="animar flex flex-col items-center justify-center mt-15">
+            <h1 className="font-cormorant font-bold text-gold text-[24px] font-semibold w-[384px] md:w-[450px] md:text-[28px] md:-mt-15">
+              Nós somo os melhores em fidelidade e satisfação do cliente
+            </h1>
+            <p className="text-white/90 font-inter text-[16px] w-[384px] mt-6 md:w-[450px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Cupiditate consequatur cumque in itaque, ab assumenda fuga dolorem
+              non laboriosam possimus sequi facere vero et soluta doloremque
+              ullam unde exercitationem expedita. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Illum aspernatur aliquid quidem
+              excepturi minima omnis libero consectetur, ipsum voluptatibus.
+              Doloribus labore et cumque. Illum praesentium ducimus est expedita
+              nihil explicabo?
+            </p>
 
-          <span className="font-cormorant text-[36px] font-semibold text-gold w-[384px]">
-            1995
-          </span>
+            <span className="font-cormorant text-[36px] font-semibold text-gold w-[384px] md:w-[450px]">
+              1995
+            </span>
 
-          <p className="font-inter text-white text-[16px] w-[384px] mt-2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-            facere, placeat voluptatibus modi ipsa sint, exercitationem,
-            doloremque repudiandae delectus facilis dolorum possimus nihil ipsam
-            repellendus cumque esse vel cupiditate perferendis!
-          </p>
-        </div>
+            <p className="font-inter text-white text-[16px] w-[384px] mt-2 md:w-[450px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+              facere, placeat voluptatibus modi ipsa sint, exercitationem,
+              doloremque repudiandae delectus facilis dolorum possimus nihil
+              ipsam repellendus cumque esse vel cupiditate perferendis!
+            </p>
+          </div>
 
-        {/*Imagem da Advogada*/}
-        <div className="flex justify-center items-center mt-8">
-          <img
-            className="w-[305px]"
-            src="/img/sobre/mulher.webp"
-            alt="Imagem Advogada"
-          />
+          {/*Imagem da Advogada*/}
+          <div className="flex justify-center items-center mt-[34px] md:mt-[41px]">
+            <img
+              className="w-[305px] md:scale-110"
+              src="/img/sobre/mulher.webp"
+              alt="Imagem Advogada"
+            />
+          </div>
         </div>
       </div>
     </div>

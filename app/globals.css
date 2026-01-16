@@ -15,3 +15,15 @@
 .font-inter {
   font-family: var(--font-inter);
 }
+
+/* Animações com Intersection Observer */
+.animar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animar-ativo {
+  opacity: 1;
+  transform: translateY(0);
+}

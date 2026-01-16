@@ -1,6 +1,11 @@
+"use client";
+
 import ResponsiveAppBar from "../components/MobileHeader";
+import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 
 function Hero() {
+  useIntersectionObserver();
+
   return (
     <div
       id="hero-main"
@@ -26,7 +31,7 @@ function Hero() {
 
           <div
             id="hero-text"
-            className="flex flex-col text-center items-center justify-center pt-[81px] gap-3"
+            className="animar flex flex-col text-center items-center justify-center pt-[81px] gap-3"
           >
             <h2 className="underline font-inter -mt-15 text-white/90 md:-mt-30">
               INOVANDO IDEIAS
