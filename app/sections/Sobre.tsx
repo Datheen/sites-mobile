@@ -1,11 +1,10 @@
-
 "use client";
 
 import CountUp from "react-countup";
 
 function Sobre() {
   return (
-    <div id="sobre-section" className="bg-[#1E2833] h-[2500px]">
+    <div id="sobre-section" className="bg-[#1E2833] h-[2330px]">
       <div id="sobre-container">
         {/* Homem lendo livro sobre direitos */}
         <div
@@ -80,8 +79,17 @@ function Sobre() {
             </svg>
 
             <div className="flex flex-col -mr-7 mt-2">
-              <span id="countup" className="text-[48px] font-bold text-white/90">
-                <CountUp end={95} duration={2.5} suffix="%" enableScrollSpy scrollSpyOnce />
+              <span
+                id="countup"
+                className="text-[48px] font-bold text-white/90"
+              >
+                <CountUp
+                  end={95}
+                  duration={2.5}
+                  suffix="%"
+                  enableScrollSpy
+                  scrollSpyOnce
+                />
               </span>
               <p className="font-inter text-[10px] w-[180px] -mt-2 text-white/90">
                 Sucesso de casos em <br /> tribunais da capital e interior
@@ -92,8 +100,17 @@ function Sobre() {
           {/*Contagem anos de experiência*/}
 
           <div className="w-[292px] h-[126px] bg-gold rounded-tl-[30px] rounded-br-[30px] flex items-center justify-center gap-3">
-            <span id="countup" className="text-[64px] font-inter font-bold text-[#1E2833]">
-              <CountUp end={20} duration={2.5} prefix="+" enableScrollSpy scrollSpyOnce />
+            <span
+              id="countup"
+              className="text-[64px] font-inter font-bold text-[#1E2833]"
+            >
+              <CountUp
+                end={20}
+                duration={2.5}
+                prefix="+"
+                enableScrollSpy
+                scrollSpyOnce
+              />
             </span>
             <p className="text-[#1E2833] font-inter font-bold text-[20px]">
               Anos de <br /> experiência
